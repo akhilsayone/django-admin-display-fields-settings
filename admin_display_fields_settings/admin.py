@@ -167,7 +167,7 @@ class DisplayFieldsSettingsAdmin(admin.ModelAdmin):
                 if list_display.get(field) is False:
                     del response[response.index(field)]
 
-        if len(list_display_sort) > 0 and len(response) > 1:
+        if len(list_display_sort) > 0 and len(response) > 0:
             for field in list(list_display_sort):
                 if field not in response:
                     del list_display_sort[list_display_sort.index(field)]
